@@ -9,15 +9,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import MobileFilters from "./mobile-filters";
 
 const products = [
-	{ id: 1, name: "Apple iPhone 14 Pro 512GB Gold (MQ233)", price: 1437, image: "/images/new-arrival/Iphone14pro.png" },
-	{ id: 2, name: "Apple iPhone 11 128GB White (MQ233)", price: 510, image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 1, name: "Apple iPhone 14 Pro 512GB Gold (MQ233)", price: "1437", image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 2, name: "Apple iPhone 11 128GB White (MQ233)", price: "510", image: "/images/new-arrival/Iphone14pro.png" },
 	{ id: 3, name: "Apple iPhone 11 128GB White (MQ233)", price: 550, image: "/images/new-arrival/Iphone14pro.png" },
 	{ id: 4, name: "Apple iPhone 14 Pro 1TB Gold (MQ2V3)", price: 1499, image: "/images/new-arrival/Iphone14pro.png" },
-	{ id: 5, name: "Apple iPhone 14 Pro 1TB Gold (MQ2V3)", price: 1399, image: "/images/new-arrival/Iphone14pro.png" },
-	{ id: 6, name: "Apple iPhone 14 Pro 128GB Deep Purple (MQ0G3)", price: 1600, image: "/images/new-arrival/Iphone14pro.png" },
-	{ id: 7, name: "Apple iPhone 13 mini 128GB Pink (MLK23)", price: 850, image: "/images/new-arrival/Iphone14pro.png" },
-	{ id: 8, name: "Apple iPhone 14 Pro 256GB Space Black (MQ0T3)", price: 1399, image: "/images/new-arrival/Iphone14pro.png" },
-	{ id: 9, name: "Apple iPhone 14 Pro 256GB Silver (MQ103)", price: 1399, image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 5, name: "Apple iPhone 14 Pro 1TB Gold (MQ2V3)", price: "1399", image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 6, name: "Apple iPhone 14 Pro 128GB Deep Purple (MQ0G3)", price: "1600", image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 7, name: "Apple iPhone 13 mini 128GB Pink (MLK23)", price: "850", image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 8, name: "Apple iPhone 14 Pro 256GB Space Black (MQ0T3)", price: "1399", image: "/images/new-arrival/Iphone14pro.png" },
+	{ id: 9, name: "Apple iPhone 14 Pro 256GB Silver (MQ103)", price: "1399", image: "/images/new-arrival/Iphone14pro.png" },
 ];
 
 function MobileView() {
