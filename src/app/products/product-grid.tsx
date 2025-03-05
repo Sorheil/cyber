@@ -1,10 +1,10 @@
 import Product from "@/components/ui/product";
-interface Product {
+type Product = {
 	id: number;
 	name: string;
-	price: string;
+	price: string | number;
 	image: string;
-}
+};
 
 interface ProductGridProps {
 	products: Product[];
