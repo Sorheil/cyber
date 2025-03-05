@@ -2,7 +2,7 @@ import Product from "@/components/ui/product";
 interface Product {
 	id: number;
 	name: string;
-	price: number;
+	price: string;
 	image: string;
 }
 
