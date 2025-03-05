@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Heart, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 /**TODO
@@ -48,7 +48,7 @@ export default function ProductDetailCard() {
 						alt="iPhone 14 Pro Max"
 						width={400}
 						height={400}
-						className="max-h-[400px] object-contain"
+						className=" w-full max-h-[400px] object-contain"
 					/>
 				</div>
 			</div>
@@ -63,7 +63,7 @@ export default function ProductDetailCard() {
 
 				<div className="mb-6">
 					<p className="text-sm text-gray-500 mb-2">Select color:</p>
-					<div className="flex gap-2 mb-4">
+					<div className="flex gap-2 mb-4 flex-wrap">
 						<button
 							className={`w-6 h-6 rounded-full ${selectedColor === "purple" ? "ring-2 ring-offset-2 ring-black" : ""}`}
 							style={{ backgroundColor: "#7E6B8E" }}
@@ -230,13 +230,13 @@ export default function ProductDetailCard() {
 				</p>
 
 				<div className="flex gap-4 mb-6">
-					<Button
+					{/* <Button
 						variant="outline"
 						className="flex-1 py-6"
 					>
 						<Heart className="h-5 w-5 mr-2" />
 						Add to Wishlist
-					</Button>
+					</Button> */}
 					<Button className="flex-1 py-6 bg-black hover:bg-gray-800 text-white">
 						<ShoppingCart className="h-5 w-5 mr-2" />
 						Add to Cart

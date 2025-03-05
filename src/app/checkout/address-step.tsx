@@ -89,10 +89,10 @@ export function AddressStep({ selectedAddress, setSelectedAddress, onNext }: Add
 			</RadioGroup>
 
 			<div className="mt-8 flex justify-center border-t border-dashed pt-8">
-				<button className="flex items-center text-sm font-medium">
+				<Button className="flex items-center text-sm font-medium">
 					<Plus className="w-4 h-4 mr-2" />
 					Add New Address
-				</button>
+				</Button>
 			</div>
 
 			<div className="mt-8 flex justify-end space-x-4">

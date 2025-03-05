@@ -3,12 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Search, ShoppingCart, Menu, X, Smartphone, Computer, Watch, Camera, Headphones, Gamepad2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
 	{ href: "/", label: "Home" },
 	{ href: "/about", label: "About" },
-	{ href: "/contact", label: "Contact Us" },
+	{ href: "/contact-us", label: "Contact Us" },
 	{ href: "/faq", label: "FAQ" },
 ];
 
@@ -25,7 +24,7 @@ export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
-		<header className="w-full">
+		<header className="w-full ">
 			<div className="flex items-center justify-between px-4 md:px-8 py-3 lg:py-6">
 				<div className="flex items-center">
 					<button
@@ -67,19 +66,12 @@ export default function Header() {
 				</nav>
 
 				<div className="flex items-center space-x-4">
-					<Button
-						aria-label="Cart"
-						size="icon"
-						variant="default"
-						className="cursor-pointer hover:bg-gray-200"
-					>
-						<Link href="/cart">
-							<ShoppingCart
-								size={20}
-								className="text-gray-700"
-							/>
-						</Link>
-					</Button>
+					<Link href="/cart">
+						<ShoppingCart
+							size={20}
+							className="text-gray-700"
+						/>
+					</Link>
 				</div>
 			</div>
 

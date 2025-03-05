@@ -32,7 +32,7 @@ export default function FiltersSidebar() {
 	];
 
 	return (
-		<div className="space-y-6">
+		<div className="space-y-6 w-1/4">
 			<Accordion
 				type="single"
 				collapsible
@@ -66,14 +66,14 @@ export default function FiltersSidebar() {
 									/>
 								</div>
 							</div>
-							<div className="px-1 pt-6">
+							<div className="px-1 pt-2">
 								<Slider
 									defaultValue={[0, 1299]}
 									max={1299}
 									step={1}
 									value={priceRange}
 									onValueChange={setPriceRange}
-									className="mt-6"
+									className="mt-6 bg-black rounded-lg"
 								/>
 							</div>
 						</div>

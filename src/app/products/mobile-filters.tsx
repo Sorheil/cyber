@@ -9,10 +9,11 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface MobileFiltersProps {
-	onBack: () => void;
+	open: boolean;
+	setOpen: (open: boolean) => void;
 }
 
-export default function MobileFilters({ onBack }: MobileFiltersProps) {
+export default function MobileFilters({ open, setOpen }: MobileFiltersProps) {
 	const [priceRange, setPriceRange] = useState([0, 1299]);
 
 	const brands = [
@@ -28,7 +29,7 @@ export default function MobileFilters({ onBack }: MobileFiltersProps) {
 	];
 
 	const memory = [
-		{ size: "16GB", count: 55, checked: false },
+		{ size: "16GB", count: 55, checked: true },
 		{ size: "32GB", count: 123, checked: false },
 		{ size: "64GB", count: 48, checked: false },
 		{ size: "128GB", count: 50, checked: false },
@@ -37,20 +38,23 @@ export default function MobileFilters({ onBack }: MobileFiltersProps) {
 	];
 
 	return (
-		<div className="flex flex-col min-h-screen">
-
+		<div
+			className={`fixed inset-0  w-full h-screen flex flex-col bg-white z-50 transition-transform
+    ${open ? "translate-x-0" : "-translate-x-full"}`}
+		>
 			<div className="container mx-auto px-4 py-4 flex-1">
+				{/* title */}
 				<div className="flex items-center gap-2 mb-6">
 					<Button
 						variant="ghost"
-						onClick={onBack}
+						onClick={() => setOpen(false)}
 						className="p-0 h-auto"
 					>
 						<ChevronLeft className="h-5 w-5" />
 					</Button>
 					<h1 className="text-lg font-medium">Filters</h1>
 				</div>
-
+				{/* content */}
 				<div className="space-y-6">
 					<Accordion
 						type="single"
@@ -92,7 +96,7 @@ export default function MobileFilters({ onBack }: MobileFiltersProps) {
 											step={1}
 											value={priceRange}
 											onValueChange={setPriceRange}
-											className="mt-6"
+											className=" bg-black"
 										/>
 									</div>
 								</div>
@@ -159,7 +163,7 @@ export default function MobileFilters({ onBack }: MobileFiltersProps) {
 											>
 												<Checkbox
 													id={`mobile-memory-${item.size}`}
-													checked={item.checked}
+													checked={!item.checked}
 												/>
 												<label
 													htmlFor={`mobile-memory-${item.size}`}
