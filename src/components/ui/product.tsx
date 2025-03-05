@@ -5,12 +5,12 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-type Product = {
+interface Product {
 	id: number;
 	name: string;
-	price: string;
+	price: number;
 	image: string;
-};
+}
 
 /**
  * TODO
