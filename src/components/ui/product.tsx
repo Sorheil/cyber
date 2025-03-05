@@ -5,11 +5,18 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
+type Product = {
+	id: number;
+	name: string;
+	price: string;
+	image: string;
+};
+
 /**
  * TODO
  * 1-DEFINIR L'INTERFACE  D'UN PRODUIT
  */
-export default function Product({ product }: any) {
+export default function Product({ product }: { product: Product }) {
 	const [liked, setLiked] = useState(false);
 
 	return (

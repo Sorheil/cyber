@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

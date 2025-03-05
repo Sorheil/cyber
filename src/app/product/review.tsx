@@ -1,7 +1,16 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
 
-export default function Review({ review }: any) {
+type Review = {
+	name: string;
+	date: string;
+	rating: number;
+	avatar: string;
+	comment: string;
+	images?: string[];
+};
+
+export default function Review({ review }: { review: Review }) {
 	return (
 		<div className="bg-[#FAFAFA] rounded-lg p-4">
 			<div className="flex justify-between mb-2">

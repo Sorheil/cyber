@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function AboutPage() {
 	return (
