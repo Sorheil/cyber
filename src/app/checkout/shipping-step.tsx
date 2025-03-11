@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import {
   Popover,
@@ -124,7 +123,7 @@ export function ShippingStep({
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto bg-white p-0" align="end">
-                  <Calendar
+                  {/* <Calendar
                     mode="single"
                     selected={date}
                     onSelect={(newDate) => {
@@ -138,7 +137,7 @@ export function ShippingStep({
                       today.setHours(0, 0, 0, 0);
                       return date < today;
                     }}
-                  />
+                  /> */}
                 </PopoverContent>
               </Popover>
             </div>
